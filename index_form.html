@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BLOGspulv0.5</title>
+    <script src = "blogjs.js"></script>
+  </head>
+  <p>Klik om naar de <a href="bloglees_form.php">leespagina</a> te gaan!</p>
+
+<body onLoad = "iframe()">
+    <h1>BLOG versie 0.4</h1><br>
+    <h3>Blog formulier:</h3><br>
+      <!--invoer van naam, blogtitel en blog tekst en dan versturen naar het PHP gedeelte-->
+      <form id="login" name="login" action="phpblogscript.php" enctype="multipart/form-data" method="post">
+        <!--form method = "post" action = "submit.php" id = "rtf"-->
+        Naam:<br>
+          <input type="text" name="naam"><br><br>
+        Blogtitel:<br>
+          <input type="text" name="blogtitel"><br><br>
+        Blogtekst invoer:
+          <input type = "button" value = "B" onclick = "bold()">
+          <input type = "button" value = "I" onclick = "italic()">
+          <input type = "button" value = "U" onclick = "underline()">
+          <label for="file"> Kies image-bestand :  </label>
+          <input type="file" name ="file"><br>
+
+        <br>
+            <textarea  id="blogtekstinvoer" name="blogtekstinvoer" cols="80" rows="10" style = "display: none;"></textarea>
+            <iframe name = "editor" id = "editor" style = "width: 500; height: 400;"></iframe> <br>
+          Blokkeer reakties voor dit blog artikel. <br>
+            <input type="radio" name="blokkeer" value="NEE"> NEE
+            <input type="radio" name="blokkeer" value="JA"> JA <br>
+        <br><br>
+
+          <input type = "button" onclick = "formsubmit()" value = "Verstuur">
+
+      </form>
+      <p>Klik om naar de <a href="bloglees_form.php">leespagina</a> te gaan!</p>
+  </body>
+</html>
